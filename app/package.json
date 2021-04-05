@@ -1,0 +1,43 @@
+{
+  "name": "MacGPUMiner",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "android": "react-native run-android",
+    "ios": "react-native run-ios",
+    "start": "react-native start",
+    "test": "jest",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "@eva-design/eva": "^2.0.0",
+    "@expo-google-fonts/squada-one": "^0.1.0",
+    "@microsoft/react-native-svg-desktop": "^12.1.1",
+    "@ui-kitten/components": "^5.0.0",
+    "@ui-kitten/eva-icons": "^5.0.0",
+    "chroma-js": "^2.1.1",
+    "hermes-engine-darwin": "^0.5.0",
+    "react": "16.13.1",
+    "react-native": "0.63.4",
+    "react-native-animated-spinkit": "^1.5.2",
+    "react-native-cool-speedometer": "https://github.com/lucassaid/react-native-cool-speedometer",
+    "react-native-macos": "^0.63.0-0",
+    "react-native-number-ticker": "https://github.com/LaVey1337/react-native-number-ticker",
+    "react-native-reanimated": "^2.1.0",
+    "react-native-svg": "^12.1.0",
+    "use-dencrypt-effect": "^2.0.0-rc.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.8.4",
+    "@babel/runtime": "^7.8.4",
+    "@react-native-community/eslint-config": "^1.1.0",
+    "babel-jest": "^25.1.0",
+    "eslint": "^6.5.1",
+    "jest": "^25.1.0",
+    "metro-react-native-babel-preset": "^0.59.0",
+    "react-test-renderer": "16.13.1"
+  },
+  "jest": {
+    "preset": "react-native"
+  }
+}
