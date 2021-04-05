@@ -1,8 +1,10 @@
 # MAC GPU MINER
-Modifided port of xmrstak compiled as Native module for React-Native.
+Modifided port of xmrstak compiled as Native module for React-Native using embedd AMD Radeon GPU.
 The miner comes with a nice user interface that allow easy mining, just provide XMR address and we do the rest.
 We use MoneroOcean pool and cryptonight_gpu algo, the the miner show the local hashrate / the raw pool hashrate and the final payment
 hashrate translated to XMR.
+
+Using Radeon Pro 560 4 GB (mid 2017 macbook pro), using GPU only you can run almost for 5kh/s (convert to XMR hashrate).
 
 ## Chages in XMRStak
 * Covert the miner to dynamic lib
