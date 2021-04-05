@@ -22,16 +22,14 @@ RCT_EXPORT_METHOD(setWallet:(NSString *)wallet)
   poolWallet = wallet;
   poolPassword = @"MacGpuMiner~cn/gpu";
   RCTLogInfo(@"Set wallet %@", wallet);
-  std::cout << "set wallet" << std::endl;
 }
 
 RCT_EXPORT_METHOD(startMiner)
 {
-  std::cout << "start miner" << std::endl;
-  /*reasonForActivity = CFStringCreateWithCString(NULL, "MAC GPU MINER", kCFStringEncodingASCII);
+  reasonForActivity = CFStringCreateWithCString(NULL, "MAC GPU MINER", kCFStringEncodingASCII);
   success = IOPMAssertionCreateWithName(kIOPMAssertionTypeNoDisplaySleep,
                                       kIOPMAssertionLevelOn, reasonForActivity, &assertionID);
-  */
+  
   std::string url = [poolURL cStringUsingEncoding:NSASCIIStringEncoding];
   std::string wallet = [poolWallet cStringUsingEncoding:NSASCIIStringEncoding];
   std::string pass = [poolPassword cStringUsingEncoding:NSASCIIStringEncoding];
@@ -42,17 +40,15 @@ RCT_EXPORT_METHOD(startMiner)
 RCT_EXPORT_METHOD(stopMiner)
 {
   stop_miner();
-  /*if (success == kIOReturnSuccess) {
+  if (success == kIOReturnSuccess) {
     success = IOPMAssertionRelease(assertionID);
-  }*/
+  }
 }
 
 RCT_EXPORT_METHOD(bindMinerEvents)
 {
-  std::cout << "bind miner" << std::endl;
   get_eventter()->on<PrintEvent>([=](const Event& e) {
       std::string stdMsg(static_cast<const PrintEvent&>(e).msg);
-    std::cout << stdMsg << std::endl;
       NSString *msg = [NSString stringWithCString:stdMsg.c_str() encoding:NSASCIIStringEncoding];
       RCTLogInfo(@"event: %@", msg);
       if (_hasListeners) {
